@@ -14,17 +14,17 @@ st.write("This is a test Client Panel used for unit testing - to check how infor
 radio = st.sidebar.radio("Select your Role",("Developer","Decision Maker"),key=None)
 st.sidebar.success("Select task to automate")
 dropdown = st.sidebar.selectbox("Drop down to select",("Sales invoice Processing","other"))
-if radio == "Developer":
+if radio == "Developer" and dropdown=="Sales invoice Processing":
     if st.sidebar.button("Submit"):
         st.success("Hello Developer, here is your RPA report")
         st.dataframe(df_1)
         st.button("Download now")
-if radio == "Decision Maker":
+if radio == "Decision Maker" and dropdown=="Sales invoice Processing":
     if st.sidebar.button("Submit"):
         st.success("Hello Decison Maker, here is your RPA report")
         st.dataframe(df_2)
         st.button("Download now")
-if radio == "other":
+if dropdown == "other":
     if st.sidebar.button("Submit"):
         st.success("Hello This part is in development phase Thanks for visiting")
        
