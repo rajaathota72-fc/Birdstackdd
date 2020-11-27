@@ -13,7 +13,7 @@ st.sidebar.image("Picture 1.png",width = 300)
 st.write("This is a test Client Panel used for unit testing - to check how information is provided to client based on requirements ")
 radio = st.sidebar.radio("Select your Role",("Developer","Decision Maker"),key=None)
 st.sidebar.success("Select task to automate")
-dropdown = st.sidebar.selectbox("Drop down to select",("Sales invoice Processing","Tax Automation", "Mail Automation"))
+dropdown = st.sidebar.selectbox("Drop down to select",("Sales invoice Processing"))
 if radio == "Developer":
     if st.sidebar.button("Submit"):
         st.success("Hello Developer, here is your RPA report")
@@ -24,5 +24,3 @@ if radio == "Decision Maker":
         st.success("Hello Decison Maker, here is your RPA report")
         st.dataframe(df_2)
         st.button("Download now")
-
-
