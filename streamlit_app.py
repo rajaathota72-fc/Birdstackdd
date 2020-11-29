@@ -21,5 +21,10 @@ if st.sidebar.checkbox("Get Analysis Report"):
         link = '[Click here to Navigate](https://rzp.io/l/0ne27uKX)'
         st.markdown(link, unsafe_allow_html=True)
     if st.button("Interested in Custom Solutions"):
+<<<<<<< HEAD
         link = '[Click here to Navigate](http://birdstack.tech/customsolutions.html)'
         st.markdown(link, unsafe_allow_html=True)
+=======
+        webbrowser.open_new_tab("http://birdstack.tech/customsolutions.html")
+
+>>>>>>> 7f21ffe1645fd942950e293da1f0afc17459b2be
