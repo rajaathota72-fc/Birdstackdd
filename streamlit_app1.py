@@ -16,8 +16,8 @@ st.sidebar.success("Select task to automate")
 dropdown = st.sidebar.selectbox("Drop down to select",("Sales Order Processing","Accounting", "Payroll", "Employee Onboarding","Invoice Processing"))
 if dropdown == "Sales Order Processing":
     if st.sidebar.checkbox("Get Analysis Report"):
-        st.success("Hello Decision Maker, here is your RPA report")
-        st.image("DMimages/salesorder.png", width=700)
+        st.success("Hello Developer, here is your RPA report")
+        st.image("Developerimages/salesorder.png", width=700)
         if st.button("Pay Now & Get Full Report"):
             link = '[Click here to Navigate](https://rzp.io/l/0ne27uKX)'
             st.markdown(link, unsafe_allow_html=True)
@@ -26,8 +26,8 @@ if dropdown == "Sales Order Processing":
             st.markdown(link, unsafe_allow_html=True)
 if dropdown == "Accounting":
     if st.sidebar.checkbox("Get Analysis Report"):
-        st.success("Hello Decision Maker, here is your RPA report")
-        st.image("DMimages/Accounting.png", width=700)
+        st.success("Hello Developer, here is your RPA report")
+        st.image("Developerimages/Accounting.png", width=700)
         if st.button("Pay Now & Get Full Report"):
             link = '[Click here to Navigate](https://rzp.io/l/0ne27uKX)'
             st.markdown(link, unsafe_allow_html=True)
@@ -36,8 +36,8 @@ if dropdown == "Accounting":
             st.markdown(link, unsafe_allow_html=True)
 if dropdown == "Payroll":
     if st.sidebar.checkbox("Get Analysis Report"):
-        st.success("Hello Decision Maker, here is your RPA report")
-        st.image("DMimages/payroll.png", width=700)
+        st.success("Hello Developer, here is your RPA report")
+        st.image("Developerimages/payroll.png", width=700)
         if st.button("Pay Now & Get Full Report"):
             link = '[Click here to Navigate](https://rzp.io/l/0ne27uKX)'
             st.markdown(link, unsafe_allow_html=True)
@@ -46,8 +46,8 @@ if dropdown == "Payroll":
             st.markdown(link, unsafe_allow_html=True)
 if dropdown == "Employee Onboarding":
     if st.sidebar.checkbox("Get Analysis Report"):
-        st.success("Hello Decision Maker, here is your RPA report")
-        st.image("DMimages/Onboarding.png", width=700)
+        st.success("Hello Developer, here is your RPA report")
+        st.image("Developerimages/onboarding.png", width=700)
         if st.button("Pay Now & Get Full Report"):
             link = '[Click here to Navigate](https://rzp.io/l/0ne27uKX)'
             st.markdown(link, unsafe_allow_html=True)
@@ -56,8 +56,8 @@ if dropdown == "Employee Onboarding":
             st.markdown(link, unsafe_allow_html=True)
 if dropdown == "Invoice Processing":
     if st.sidebar.checkbox("Get Analysis Report"):
-        st.success("Hello Decision Maker, here is your RPA report")
-        st.image("DMimages/invoice.png", width=700)
+        st.success("Hello Developer, here is your RPA report")
+        st.image("Developerimages/invoice.png", width=700)
         if st.button("Pay Now & Get Full Report"):
             link = '[Click here to Navigate](https://rzp.io/l/0ne27uKX)'
             st.markdown(link, unsafe_allow_html=True)
