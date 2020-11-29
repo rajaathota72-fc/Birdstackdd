@@ -24,7 +24,6 @@ name = st.sidebar.text_input("Name with Salutation","Type here")
 role = st.sidebar.text_input("Role / Designation","Type here")
 organisation = st.sidebar.text_input("Name of your Organisation","Type here")
 st.sidebar.success("Select task to automate")
-<<<<<<< HEAD
 dropdown = st.sidebar.selectbox("Drop down to select",("Sales invoice Processing","Tax Automation", "Mail Automation"))
 if st.sidebar.checkbox("Get Analysis Report"):
     st.success("Hello Decision Maker, here is your RPA report")
