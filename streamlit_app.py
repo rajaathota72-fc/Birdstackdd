@@ -28,7 +28,6 @@ dropdown = st.sidebar.selectbox("Drop down to select",("Sales invoice Processing
 if st.sidebar.checkbox("Get Analysis Report"):
     st.success("Hello Decision Maker, here is your RPA report")
     st.image("DMimages/salesorder.png", width=700)
-    storing_data(name,role,organisation)
     if st.button("Pay Now & Get Full Report"):
         webbrowser.open_new_tab("https://www.streamlit.io/")
     if st.button("Interested in Custom Solutions"):
