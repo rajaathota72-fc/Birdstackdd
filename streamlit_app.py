@@ -24,6 +24,7 @@ name = st.sidebar.text_input("Name with Salutation","Type here")
 role = st.sidebar.text_input("Role / Designation","Type here")
 organisation = st.sidebar.text_input("Name of your Organisation","Type here")
 st.sidebar.success("Select task to automate")
+<<<<<<< HEAD
 dropdown = st.sidebar.selectbox("Drop down to select",("Sales invoice Processing","Tax Automation", "Mail Automation"))
 if st.sidebar.checkbox("Get Analysis Report"):
     st.success("Hello Decision Maker, here is your RPA report")
@@ -35,3 +36,20 @@ if st.sidebar.checkbox("Get Analysis Report"):
         webbrowser.open_new_tab("http://birdstack.tech/customsolutions.html")
 
 
+=======
+dropdown = st.sidebar.selectbox("Drop down to select",("Sales invoice Processing","other"))
+if radio == "Developer" and dropdown=="Sales invoice Processing":
+    if st.sidebar.button("Submit"):
+        st.success("Hello Developer, here is your RPA report")
+        st.dataframe(df_1)
+        st.button("Download now")
+if radio == "Decision Maker" and dropdown=="Sales invoice Processing":
+    if st.sidebar.button("Submit"):
+        st.success("Hello Decison Maker, here is your RPA report")
+        st.dataframe(df_2)
+        st.button("Download now")
+if dropdown == "other":
+    if st.sidebar.button("Submit"):
+        st.success("Hello This part is in development phase Thanks for visiting")
+       
+>>>>>>> cc0d7fa586f2e0c0f7bd7a5074b70b58c3056be5
