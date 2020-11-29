@@ -1,28 +1,37 @@
 import pandas as pd
-df = pd.read_csv("salesorder.csv")
-#print(df)
-df_1 = df[["RPA BOT","Type","Platform","RPA Tool","Link"]]
-#print(df_1)
-df_2 = df[["RPA BOT","ROI","Cost Reduction","Visibility","Accuracy","Productivity"]]
-#print(df_2)
+import os
+def storing_data(name,role,organisation):
+    List = [name,role,organisation]
+    df = pd.DataFrame(List)
+    directory = "DM_database/"
+    os.mkdir("DM_database/"+name)
+    file = os.path.join(directory,name)
+    save = df.to_csv(file+"/details.csv")
+    return save
 import streamlit as st
-st.title("News Feed Summary Test - Admin Panel")
-st.image("rpaf.jpg",width=700)
+import webbrowser
+template = """
+   <div style = "background-color : blue; padding : 1px;">
+   <h2 style = "color:white;text-align:center;"> Decision Maker Zone - Interaction Portal </h2>
+   </div>
+   """
+st.markdown(template, unsafe_allow_html=True)
+st.image("dm.gif")
 st.sidebar.title("Fill the details")
 st.sidebar.image("Picture 1.png",width = 300)
-st.write("This is a test Client Panel used for unit testing - to check how information is provided to client based on requirements ")
-radio = st.sidebar.radio("Select your Role",("Developer","Decision Maker"),key=None)
+st.write(" Get your RPA report today, Open sidebar & fill the details to let us know what you are looking for!")
+name = st.sidebar.text_input("Name with Salutation","Type here")
+role = st.sidebar.text_input("Role / Designation","Type here")
+organisation = st.sidebar.text_input("Name of your Organisation","Type here")
 st.sidebar.success("Select task to automate")
 dropdown = st.sidebar.selectbox("Drop down to select",("Sales invoice Processing","Tax Automation", "Mail Automation"))
-if radio == "Developer":
-    if st.sidebar.button("Submit"):
-        st.success("Hello Developer, here is your RPA report")
-        st.dataframe(df_1)
-        st.button("Download now")
-if radio == "Decision Maker":
-    if st.sidebar.button("Submit"):
-        st.success("Hello Decison Maker, here is your RPA report")
-        st.dataframe(df_2)
-        st.button("Download now")
+if st.sidebar.checkbox("Get Analysis Report"):
+    st.success("Hello Decision Maker, here is your RPA report")
+    st.image("DMimages/salesorder.png", width=700)
+    storing_data(name,role,organisation)
+    if st.button("Pay Now & Get Full Report"):
+        webbrowser.open_new_tab("https://www.streamlit.io/")
+    if st.button("Interested in Custom Solutions"):
+        webbrowser.open_new_tab("http://birdstack.tech/customsolutions.html")
 
 
