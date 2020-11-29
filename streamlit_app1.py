@@ -5,7 +5,7 @@ template = """
    </div>
    """
 st.markdown(template, unsafe_allow_html=True)
-st.image("dm.gif")
+st.image("developer.gif")
 st.sidebar.title("Fill the details")
 st.sidebar.image("Picture 1.png",width = 300)
 st.write(" Get your RPA report today, Open sidebar & fill the details to let us know what you are looking for!")
